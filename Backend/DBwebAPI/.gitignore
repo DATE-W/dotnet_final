@@ -1,0 +1,49 @@
+# ASP.NET
+*.suo
+*.user
+*.bak
+*.cache
+*.dll
+*.exe
+*.pdb
+*.log
+*.vspscc
+*_i.c
+*_p.c
+*.ncb
+*.sdf
+*.opensdf
+*.suo
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+build/
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio files
+.vs/
+.vscode/
+
+# NuGet packages
+*.nupkg
+packages/
+*.lock.json
+*.nuget.props
+*.nuget.targets
+
+# TypeScript
+*.js
+*.map
+
+# Others
+[Tt]humbs.db
+*.swp
+*.cache
+ClientApp/dist/
+node_modules/
+npm-debug.log
+*.jks
