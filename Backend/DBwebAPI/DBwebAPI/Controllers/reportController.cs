@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using static DBwebAPI.Models.NoticeModel;
 using static DBwebAPI.Controllers.Register;
 using System.Runtime.CompilerServices;
+using DBwebAPI.Utils;
 
 namespace DBwebAPI.Controllers
 {

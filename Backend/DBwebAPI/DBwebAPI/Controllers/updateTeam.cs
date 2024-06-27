@@ -13,6 +13,7 @@ using System.DirectoryServices.ActiveDirectory;
 using System.Security.Permissions;
 using System.Xml.Linq;
 using System.Text.RegularExpressions;
+using DBwebAPI.Utils;
 
 namespace DBwebAPI.Controllers
 {

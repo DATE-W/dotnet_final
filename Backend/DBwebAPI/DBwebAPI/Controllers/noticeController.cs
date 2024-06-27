@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using static DBwebAPI.Controllers.Register;
 using static DBwebAPI.Controllers.updateTeamController;
 using static DBwebAPI.Models.NoticeModel;
+using DBwebAPI.Utils;
 
 namespace DBwebAPI.Controllers
 {

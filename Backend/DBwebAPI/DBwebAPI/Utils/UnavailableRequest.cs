@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 
-namespace DBwebAPI
+namespace DBwebAPI.Utils
 {
     public class UnavailableRequest : StatusCodeResult
     {

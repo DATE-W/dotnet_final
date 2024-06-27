@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SqlSugar;
 using DBwebAPI.Models;
-using DBwebAPI.Controllers;
 using Newtonsoft.Json.Linq;
 using System.Security.Principal;
 using Newtonsoft.Json;
@@ -17,6 +16,7 @@ using System.Xml.Linq;
 using System.Drawing;
 using static DBwebAPI.Models.NoticeModel;
 using System.Drawing.Text;
+using DBwebAPI.Utils;
 
 namespace DBwebAPI.Controllers
 {

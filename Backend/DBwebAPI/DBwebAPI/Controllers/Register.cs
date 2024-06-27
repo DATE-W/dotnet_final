@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SqlSugar;
 using DBwebAPI.Models;
-using DBwebAPI.Controllers;
+using DBwebAPI.Utils;
 
 namespace DBwebAPI.Controllers
 {

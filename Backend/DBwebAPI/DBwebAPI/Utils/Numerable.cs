@@ -1,4 +1,4 @@
-﻿namespace DBwebAPI
+﻿namespace DBwebAPI.Utils
 {
     public enum ValidTokenAuthority
     {

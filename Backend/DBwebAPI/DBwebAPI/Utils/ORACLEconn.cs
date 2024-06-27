@@ -1,9 +1,8 @@
-﻿
+﻿using Microsoft.AspNetCore.Mvc;
 using Oracle.ManagedDataAccess.Client;
 using SqlSugar;
 
-
-namespace DBwebAPI
+namespace DBwebAPI.Utils
 {
     public class DBconn
     {
@@ -29,7 +28,7 @@ namespace DBwebAPI
                         //Console.WriteLine(sql);//输出sql,查看执行sql
                     };
                 }
-                
+
                 );
                 return true;
             }
@@ -38,40 +37,26 @@ namespace DBwebAPI
                 return false;
             }
         }
-
-
-        //public SqlSugarScope Db = new SqlSugarScope(new ConnectionConfig()
-        //{
-        //    ConnectionString = constr,//连接符字串
-        //    DbType = DbType.Oracle,//数据库类型
-        //    IsAutoCloseConnection = true
-        //},
-        //db => {
-        //    //调试SQL事件，可以删掉
-        //    db.Aop.OnLogExecuting = (sql, pars) =>
-        //    {
-        //        //Console.WriteLine(sql);//输出sql,查看执行sql
-        //    };
-        //});
-
-
     }
+    public class ORACLEconn
+    {
+        public SqlSugarScope sqlORM = null;
+        public bool getConn()
+        {
+            Console.WriteLine("get access!");
 
+            //创建数据库连接
+            DBconn dbconn = new DBconn();
+            //打开ORM
+            dbconn.Conn();
 
+            sqlORM = dbconn.sqlORM;
 
-
-    //public class SQLSugar
-    //{
-
-
-    //    public static string constr = "Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=orcl)));Persist Security Info=True;User ID=c##test;Password=021120;";
-
-    //    public SqlSugarClient Db = new SqlSugarClient(new ConnectionConfig()
-    //    {
-    //        ConnectionString = constr,
-    //        DbType = DbType.Oracle,
-    //        IsAutoCloseConnection = true
-    //    });
-
-    //}
+            if (sqlORM != null)
+            {
+                Console.WriteLine("open success!"); return true;
+            }
+            else return false;
+        }
+    }
 }
