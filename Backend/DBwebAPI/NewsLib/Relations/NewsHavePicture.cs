@@ -1,4 +1,4 @@
-﻿namespace DBwebAPI.Relations
+﻿namespace NewsLib.Relations
 {
     public class NewsHavePicture
     {

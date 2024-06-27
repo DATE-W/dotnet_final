@@ -2,9 +2,10 @@ using DBwebAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 using SqlSugar;
 using DBwebAPI.Models;
-using DBwebAPI.Relations;
 using static DBwebAPI.Models.NoticeModel;
 using DBwebAPI.Utils;
+using NewsLib.Models;
+using NewsLib.Relations;
 
 namespace DBwebAPI.Controllers
 {

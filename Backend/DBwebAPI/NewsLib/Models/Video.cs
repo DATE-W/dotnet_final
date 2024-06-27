@@ -1,4 +1,4 @@
-﻿namespace DBwebAPI.Models
+﻿namespace NewsLib.Models
 {
     public class Video
     {
