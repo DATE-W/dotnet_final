@@ -24,6 +24,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\NewsLib\NewsLib.csproj" />
+    <ProjectReference Include="..\TeamLib\TeamLib.csproj" />
   </ItemGroup>
 
 </Project>

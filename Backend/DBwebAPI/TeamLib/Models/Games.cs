@@ -1,11 +1,7 @@
-﻿using Microsoft.Extensions.Hosting;
-using Oracle.ManagedDataAccess.Types;
-using SqlSugar;
-using System.Data;
-using System.Security.Policy;
+﻿using SqlSugar;
 
 
-namespace DBwebAPI.Models
+namespace TeamLib.Models
 {
 
     //public class Team

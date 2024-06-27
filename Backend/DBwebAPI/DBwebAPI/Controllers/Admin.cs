@@ -1,11 +1,11 @@
 using DBwebAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 using SqlSugar;
-using DBwebAPI.Models;
 using static DBwebAPI.Models.NoticeModel;
 using DBwebAPI.Utils;
 using NewsLib.Models;
 using NewsLib.Relations;
+using TeamLib.Models;
 
 namespace DBwebAPI.Controllers
 {

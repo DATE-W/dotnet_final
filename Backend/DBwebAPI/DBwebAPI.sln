@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DBwebAPI", "DBwebAPI\DBwebA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsLib", "NewsLib\NewsLib.csproj", "{D9F245FF-C7A3-4BDC-88D2-30E2511D13AA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamLib", "TeamLib\TeamLib.csproj", "{50F0BA5A-B79C-4448-B8F0-231E76F0C362}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D9F245FF-C7A3-4BDC-88D2-30E2511D13AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9F245FF-C7A3-4BDC-88D2-30E2511D13AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9F245FF-C7A3-4BDC-88D2-30E2511D13AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50F0BA5A-B79C-4448-B8F0-231E76F0C362}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50F0BA5A-B79C-4448-B8F0-231E76F0C362}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50F0BA5A-B79C-4448-B8F0-231E76F0C362}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50F0BA5A-B79C-4448-B8F0-231E76F0C362}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

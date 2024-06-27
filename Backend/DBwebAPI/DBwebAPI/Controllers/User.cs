@@ -14,6 +14,7 @@ using System.Security.Principal;
 using Newtonsoft.Json.Linq;
 using static DBwebAPI.Models.NoticeModel;
 using DBwebAPI.Utils;
+using TeamLib.Models;
 
 namespace DBwebAPI.Controllers
 {
