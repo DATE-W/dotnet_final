@@ -3,7 +3,7 @@ using DBwebAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 //using static DBwebAPI.Controllers.noticeController;
 using static DBwebAPI.Models.NoticeModel;
-using static DBwebAPI.Controllers.Register;
+using static DBwebAPI.Controllers.RegisterController;
 using System.Runtime.CompilerServices;
 using DBwebAPI.Utils;
 

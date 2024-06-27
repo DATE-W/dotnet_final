@@ -12,7 +12,7 @@ namespace DBwebAPI.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
-    public class Picture : ControllerBase
+    public class PictureController : ControllerBase
     {
         //验证文件后缀名合法性
         public class FileUtility

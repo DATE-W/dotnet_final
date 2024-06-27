@@ -7,7 +7,7 @@ namespace DBwebAPI.Controllers
 {
     [ApiController]
     [Route("api/[controller]/[action]")]
-    public class Register : ControllerBase  
+    public class RegisterController : ControllerBase  
     {
         public class RegisterRequest
         {

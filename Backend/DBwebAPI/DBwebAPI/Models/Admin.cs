@@ -3,7 +3,7 @@ using System.Security.Principal;
 
 namespace DBwebAPI.Models
 {
-    public class AdminController
+    public class Admin
     {
 
         public class Admins
