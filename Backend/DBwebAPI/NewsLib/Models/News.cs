@@ -1,6 +1,6 @@
 ﻿namespace NewsLib.Models
 {
-    public class News
+    public class News 
     {
         public int news_id { get; set; }
         public string title { get; set; }

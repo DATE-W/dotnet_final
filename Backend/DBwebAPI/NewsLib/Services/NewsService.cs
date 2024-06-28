@@ -1,12 +1,10 @@
-﻿using NewsLib.Models;
+﻿using CLRLib;
+using NewsLib.Models;
 using NewsLib.Relations;
 using NewsLib.Utils;
 using SqlSugar;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel;
 
 namespace NewsLib.Services
 {
@@ -38,6 +36,7 @@ namespace NewsLib.Services
                     //var news = await sqlORM.Queryable<News>().LeftJoin<NewsHavePicture>((n, nhp)=> n.news_id == nhp.news_id).Select((n, nhp)=>new NewsWithPicture 
                     //{news_id = n.news_id, publishDateTime = n.publishDateTime, summary = n.summary, contains = n.contains, matchTag = n.matchTag, propertyTag = n.propertyTag})
                     //    .ToListAsync();
+
                     List<News> news = new List<News>();
                     List<NewsWithPicture> ret = new List<NewsWithPicture>();
                     if (mtag == "" && ptag == "")
@@ -249,7 +248,21 @@ namespace NewsLib.Services
                     //    .AndIF(name != null, it => it.Name == name && it.Sex == 1)
                     //    .ToExpression();//注意 这一句 不能少
                     List<News> news = await sqlORM.Queryable<News>().Where(it => (it.title.Contains(keyword) || it.summary.Contains(keyword) || it.contains.Contains(keyword))).ToListAsync();
-                    Func<News, int> evaluate = x =>
+
+                    List<int> ids = news.Select(n => n.news_id).ToList();
+                    List<string> titles = news.Select(n => n.title).ToList();
+                    List<string> summaries = news.Select(n => n.summary).ToList();
+                    List<string> contents = news.Select(n => n.contains).ToList();
+                    // 使用 C++/CLI 的 NewsSorter 类
+                    NewsSorter sorter = new NewsSorter(keyword);
+                    List<int> sortedIds = sorter.SortNews(
+                        ids,
+                        titles,
+                        summaries,
+                        contents
+                    );
+
+                    /*Func<News, int> evaluate = x =>
                     {
                         int num = 0;
                         if (x.title.Contains(keyword))
@@ -271,7 +284,8 @@ namespace NewsLib.Services
                     {
                         int na = evaluate(a), nb = evaluate(b);
                         return (na == nb ? 0 : (na > nb ? -1 : 1));
-                    });
+                    });*/
+
                     ret = new List<NewsWithPicture>();
                     for (int i = 0; i < news.Count; i++)
                     {
