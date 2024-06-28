@@ -1,12 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.IO;
 using System.Text;
 using System.Security.Cryptography;
-using SqlSugar;
-using System.Linq.Expressions;
-using DBwebAPI;
 
 namespace DBwebAPI.Controllers
 {
@@ -14,15 +9,6 @@ namespace DBwebAPI.Controllers
     [ApiController]
     public class PictureController : ControllerBase
     {
-        //验证文件后缀名合法性
-        public class FileUtility
-        {
-            public static bool IsFileExtensionValid(IFormFile file, string[] allowedExtensions)
-            {
-                var fileExtension = Path.GetExtension(file.FileName).ToLowerInvariant();
-                return allowedExtensions.Contains(fileExtension);
-            }
-        }
         [HttpPost]
         public async Task<IActionResult> SaveFile(List<IFormFile> files)
         {

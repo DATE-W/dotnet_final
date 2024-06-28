@@ -2,16 +2,6 @@
 using SqlSugar;
 using DBwebAPI.Models;
 using System.IdentityModel.Tokens.Jwt;
-using static DBwebAPI.Controllers.LoginController;
-using static DBwebAPI.Controllers.ForumController;
-using static DBwebAPI.Controllers.UserController;
-using System.Security.AccessControl;
-using System.Security.Cryptography;
-using System;
-using Dm;
-using System.Reflection.Metadata;
-using System.Security.Principal;
-using Newtonsoft.Json.Linq;
 using static DBwebAPI.Models.NoticeModel;
 using DBwebAPI.Utils;
 using TeamLib.Models;

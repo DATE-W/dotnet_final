@@ -74,9 +74,6 @@ namespace DBwebAPI.Controllers
             else {return Ok(new CustomResponse { ok = "no", value = "数据库连接失败" }); };
         }
 
-
-
-
         [HttpPost]
         public async Task<IActionResult> adminLogin([FromBody] LoginRequest json)
         {
@@ -122,9 +119,6 @@ namespace DBwebAPI.Controllers
             }
             else { return Ok(new CustomResponse { ok = "no", value = "数据库连接失败" }); };
         }
-
-
-
 
     }
 }

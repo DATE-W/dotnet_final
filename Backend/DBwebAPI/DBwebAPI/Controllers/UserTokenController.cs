@@ -1,11 +1,5 @@
 using DBwebAPI.Utils;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.IdentityModel.Tokens;
-using NetTaste;
-using System.IdentityModel.Tokens.Jwt;
-using System.Linq;
-using System.Security.Claims;
-using System.Text;
 
 namespace DBwebAPI.Controllers
 {
@@ -13,10 +7,6 @@ namespace DBwebAPI.Controllers
     [Route("api/[controller]/[action]")]
     public class UserTokenController : ControllerBase
     {
-
-
-
-
         [HttpPost]
         public IActionResult UserToken()
         {
@@ -40,8 +30,6 @@ namespace DBwebAPI.Controllers
                 return BadRequest(ex.Message);
             }
         }
-
-
 
         [HttpPost]
         public IActionResult Test(string token)
@@ -68,7 +56,6 @@ namespace DBwebAPI.Controllers
             }
         }
 
-
         [HttpPost]
         public IActionResult AdminTest(string token)
         {
@@ -93,8 +80,5 @@ namespace DBwebAPI.Controllers
                 return BadRequest(ex.Message);
             }
         }
-
-
-
     }
 }

@@ -1,12 +1,7 @@
 ﻿using SqlSugar;
 using DBwebAPI.Models;
 using Microsoft.AspNetCore.Mvc;
-using static DBwebAPI.Controllers.RegisterController;
-using static DBwebAPI.Controllers.updateTeamController;
-using static DBwebAPI.Models.NoticeModel;
 using DBwebAPI.Utils;
-
-
 
 namespace DBwebAPI.Controllers
 {

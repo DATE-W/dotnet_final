@@ -1,7 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SqlSugar;
-using DBwebAPI.Models;
-using DBwebAPI.Controllers;
 
 namespace DBwebAPI.Controllers
 {
@@ -13,10 +10,7 @@ namespace DBwebAPI.Controllers
         public async Task<string> testTeam(string testStr)
         {
             Console.WriteLine("received!");
-        
-            return testStr;
-                
-
+            return testStr;   
         }
     }
 }
