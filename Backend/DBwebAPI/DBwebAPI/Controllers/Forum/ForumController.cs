@@ -539,17 +539,17 @@ namespace DBwebAPI.Controllers
             public string key { get;set; }
         }
 
-/*        public class CppDelegate
+        public class CppDelegate
         {
-            [DllImport("CalculateCpp.dll", CharSet =CharSet.Auto, CallingConvention =CallingConvention.Cdecl)]
+            [DllImport("CalculateCpp.dll", CharSet = CharSet.Auto, CallingConvention = CallingConvention.Cdecl)]
             public static extern int CountKeywordOccurrences(string text, string keyword);
 
             [DllImport("CalculateCpp.dll", CharSet = CharSet.Auto, CallingConvention = CallingConvention.Cdecl)]
             public static extern double CalculateRelevance(Posts post, string keyword);
-        }*/
+        }
 
 
-        // 计算帖子的关联度
+/*        // 计算帖子的关联度
         double CalculateRelevance(Posts post, string keyword)
         {
             int titleKeywordCount = CountKeywordOccurrences(post.title.ToLower(), keyword);
@@ -581,7 +581,8 @@ namespace DBwebAPI.Controllers
                 index = text.IndexOf(keyword, index + keyword.Length);
             }
             return count;
-        }
+        }*/
+        
         [HttpPost]
         public async Task<IActionResult> GetPostbySearch([FromBody] SearchPost json)
         {
@@ -625,7 +626,7 @@ namespace DBwebAPI.Controllers
                     string keyword = json.key.ToLower(); // Convert the keyword to lowercase for case-insensitive comparison
                     filteredPosts = filteredPosts
                         .Where(post => post.title.ToLower().Contains(keyword) || post.contains.ToLower().Contains(keyword))
-                        .OrderByDescending(post => CalculateRelevance(post, keyword))
+                        .OrderByDescending(post => CppDelegate.CalculateRelevance(post, keyword))
                         .ToList();
 
                     total = filteredPosts.Count();
@@ -659,7 +660,7 @@ namespace DBwebAPI.Controllers
                     string keyword = json.key.ToLower(); // Convert the keyword to lowercase for case-insensitive comparison
                     allPosts = allPosts
                         .Where(post => post.title.ToLower().Contains(keyword) || post.contains.ToLower().Contains(keyword))
-                        .OrderByDescending(post => CalculateRelevance(post, keyword))
+                        .OrderByDescending(post => CppDelegate.CalculateRelevance(post, keyword))
                         .ToList();
 
                     total = allPosts.Count();
