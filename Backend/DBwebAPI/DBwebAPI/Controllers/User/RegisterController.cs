@@ -2,6 +2,7 @@
 using SqlSugar;
 using DBwebAPI.Models;
 using DBwebAPI.Utils;
+using AdminLib.Models;
 
 namespace DBwebAPI.Controllers
 {

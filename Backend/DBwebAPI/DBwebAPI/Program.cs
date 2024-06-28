@@ -1,3 +1,4 @@
+using AdminLib.Services;
 using NewsLib.Services;
 using TeamLib.Services;
 
@@ -7,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<IVideoService, VideoService>();
 builder.Services.AddScoped<INewsService, NewsService>();
 builder.Services.AddScoped<ITeamService, TeamService>();
+builder.Services.AddScoped<IAdminService, AdminService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

@@ -4,8 +4,9 @@ using DBwebAPI.Models;
 using Newtonsoft.Json.Linq;
 using System.Security.Principal;
 using Newtonsoft.Json;
-using static DBwebAPI.Models.Admin;
 using DBwebAPI.Utils;
+using AdminLib.Models;
+using static AdminLib.Models.Admin;
 
 namespace DBwebAPI.Controllers
 {

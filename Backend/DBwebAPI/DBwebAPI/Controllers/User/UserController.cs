@@ -2,9 +2,10 @@
 using SqlSugar;
 using DBwebAPI.Models;
 using System.IdentityModel.Tokens.Jwt;
-using static DBwebAPI.Models.NoticeModel;
 using DBwebAPI.Utils;
 using TeamLib.Models;
+using AdminLib.Models;
+using static AdminLib.Models.NoticeModel;
 
 namespace DBwebAPI.Controllers
 {

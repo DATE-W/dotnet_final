@@ -1,7 +1,7 @@
 ﻿using SqlSugar;
 using System.Security.Principal;
 
-namespace DBwebAPI.Models
+namespace AdminLib.Models
 {
     public class Admin
     {

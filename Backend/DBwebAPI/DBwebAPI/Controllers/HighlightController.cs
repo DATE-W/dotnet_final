@@ -3,7 +3,6 @@ using DBwebAPI.Utils;
 using Microsoft.AspNetCore.Mvc;
 using SqlSugar;
 using static DBwebAPI.Controllers.LoginController;
-using static DBwebAPI.Models.NoticeModel;
 
 namespace DBwebAPI.Controllers
 {

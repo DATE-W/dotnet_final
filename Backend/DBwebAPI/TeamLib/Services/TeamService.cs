@@ -173,7 +173,7 @@ namespace TeamLib.Services
                         player_id = top.player_id,
                         photo = p.photo,
                         club = t.chinesename,
-                        enName = t.enname,
+                        enName = p.enName,
                         position = p.type,
                         number = p.playerNumber,
                         nationality = p.country,

@@ -1,11 +1,9 @@
 ﻿using SqlSugar;
-using DBwebAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 //using static DBwebAPI.Controllers.noticeController;
-using static DBwebAPI.Models.NoticeModel;
-using static DBwebAPI.Controllers.RegisterController;
-using System.Runtime.CompilerServices;
 using DBwebAPI.Utils;
+using AdminLib.Models;
+using static AdminLib.Models.NoticeModel;
 
 namespace DBwebAPI.Controllers
 {

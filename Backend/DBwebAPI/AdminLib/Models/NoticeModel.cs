@@ -1,7 +1,7 @@
 ﻿using SqlSugar;
 
 
-namespace DBwebAPI.Models
+namespace AdminLib.Models
 {
     public class NoticeModel
     {

@@ -3,6 +3,7 @@ using SqlSugar;
 using DBwebAPI.Models;
 using Microsoft.AspNetCore.Identity;
 using DBwebAPI.Utils;
+using AdminLib.Models;
 
 namespace DBwebAPI.Controllers
 {

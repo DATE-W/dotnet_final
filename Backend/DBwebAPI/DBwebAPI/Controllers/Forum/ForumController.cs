@@ -1,22 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SqlSugar;
-using DBwebAPI.Models;
-using Newtonsoft.Json.Linq;
-using System.Security.Principal;
-using Newtonsoft.Json;
-using System.Security.Claims;
 using System.IdentityModel.Tokens.Jwt;
-using static DBwebAPI.Controllers.LoginController;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.Extensions.Hosting;
-using System.Diagnostics;
-using static DBwebAPI.Controllers.ForumController;
-using System.ComponentModel;
-using System.Xml.Linq;
-using System.Drawing;
-using static DBwebAPI.Models.NoticeModel;
-using System.Drawing.Text;
 using DBwebAPI.Utils;
+using AdminLib.Models;
+using static AdminLib.Models.NoticeModel;
+using System.Runtime.InteropServices;
 
 namespace DBwebAPI.Controllers
 {
@@ -550,6 +538,17 @@ namespace DBwebAPI.Controllers
             public string tag { get; set; }
             public string key { get;set; }
         }
+
+/*        public class CppDelegate
+        {
+            [DllImport("CalculateCpp.dll", CharSet =CharSet.Auto, CallingConvention =CallingConvention.Cdecl)]
+            public static extern int CountKeywordOccurrences(string text, string keyword);
+
+            [DllImport("CalculateCpp.dll", CharSet = CharSet.Auto, CallingConvention = CallingConvention.Cdecl)]
+            public static extern double CalculateRelevance(Posts post, string keyword);
+        }*/
+
+
         // 计算帖子的关联度
         double CalculateRelevance(Posts post, string keyword)
         {

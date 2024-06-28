@@ -1,10 +1,10 @@
-﻿using Microsoft.Extensions.Hosting;
+﻿
 using Oracle.ManagedDataAccess.Types;
 using SqlSugar;
 using System.Data;
 using System.Security.Policy;
 
-namespace DBwebAPI.Models
+namespace AdminLib.Models
 {
     public class Usr
     {
